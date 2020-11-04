@@ -3,6 +3,7 @@ import NavigationMenu from '../Navigation/NavigationMenu';
 import Footer from '../Footer/Footer';
 import Home from '../../Pages/Home';
 import About from '../../Pages/About';
+import AnimalFacts from '../../Pages/AnimalFacts';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
               </Route>
               <Route path="/about">
                   <About />
+              </Route>
+              <Route path="/facts">
+                  <AnimalFacts />
               </Route>
           </Switch>
         </div>
