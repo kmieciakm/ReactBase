@@ -27,7 +27,7 @@ function About() {
                 </Row>
                 </Container>
                 <p>
-                    You can download code of this app at: <a href="https://github.com/kmieciakm">Github</a>
+                    You can download code of this app at: <a href="https://github.com/kmieciakm/ReactBase">Github</a>
                 </p>
                 <p>
                     <Link to={`/`}>

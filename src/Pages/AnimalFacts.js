@@ -2,16 +2,14 @@ import React from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Alert from 'react-bootstrap/Alert'
 import { GetRandomFact } from "../Services/AnimalsFactsService";
+import Spinner from "../Components/Spinner/spinner";
 
 function AnimalFacts() {
     let fact = GetRandomFact();
     let content = null;
 
     if (fact.loading) {
-        content =
-            <div className="text-white">
-                Loading ...
-            </div>
+        content = <Spinner/>
     }
 
     if (fact.error) {
