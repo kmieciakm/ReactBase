@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-function NavigationMenu(props){
+function NavigationMenu(){
 
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
@@ -9,7 +9,7 @@ function NavigationMenu(props){
   
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom border-dark">
-        <Link to={`/`} className="navbar-brand text-info font-weight-bolder">
+        <Link to={`/`} onClick={() => setIsNavCollapsed(true)} className="navbar-brand text-info font-weight-bolder">
           <span className="">React Base App</span>
         </Link>
         <button className="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBox" aria-controls="navbarBox"
@@ -18,9 +18,9 @@ function NavigationMenu(props){
         </button>
   
         <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarBox">
-          <Link to={`/`} className="nav-link text-info">Home</Link>
-          <Link to={`/about`} className="nav-link text-info">About</Link>
-          <Link to={`/facts`} className="nav-link text-info">Animal Facts</Link>
+          <Link to={`/`} onClick={() => setIsNavCollapsed(true)} className="nav-link text-info">Home</Link>
+          <Link to={`/about`} onClick={() => setIsNavCollapsed(true)} className="nav-link text-info">About</Link>
+          <Link to={`/facts`} onClick={() => setIsNavCollapsed(true)} className="nav-link text-info">Animal Facts</Link>
         </div>
       </nav>
     );

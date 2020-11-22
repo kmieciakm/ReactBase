@@ -1,9 +1,9 @@
-import useHttpGet from '../Hooks/HttpGet';
+import axios from 'axios';
 
 const baseUrl = `https://cat-fact.herokuapp.com`;
 
 function GetRandomFact() {
-    return useHttpGet(baseUrl + '/facts/random');
+    return axios.get(baseUrl + '/facts/random');
 };
 
 export { GetRandomFact };
